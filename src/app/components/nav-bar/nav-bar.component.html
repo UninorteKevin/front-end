@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light myColores-background">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+    
+    <ul class="nav ml-auto mr-5">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Favoritos (0)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Otros</a>
+        </li>
+      </ul>
+    <ul class="nav align-items-center">
+        <li class="nav-item">
+            <a class="nav-link text-dark" [routerLink] = "['/login']">
+                <span class="mx-2">Mi cuenta</span>
+                <div class="avatar_mask text-dark" *ngIf = "Identity">
+                    <img src="/assets/img/users/user-icon.svg" alt="ImageProfile">
+                </div>
+                <fa-icon [icon] = "faUserCircle" class="fa fa-2x"></fa-icon>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#">
+                <fa-icon [icon]="faShoppingBag" class="fa fa-2x"></fa-icon>
+            </a>
+        </li>
+      </ul>
+  </nav>

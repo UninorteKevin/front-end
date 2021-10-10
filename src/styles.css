@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: #E1DDDD;
+    font-family:'Roboto';
+}
+
+
+.title{
+    font-family: 'roboto';
+    font-weight: bold;
+    font-size: x-large;
+}
+
+
+/*COLORES PERSONALIZADOS CSS*/
+.myColores-background{
+    background-color: #E1DDDD;
+}
+
+.myColores-bg-secondary{
+    background-color: #E6E6E6;
+}
+
+/*CSS PARA LAS IMAGENES DEL AVATAR*/
+.avatar_mask{
+    width: 40px;
+    height: 40px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.avatar_mask img {
+    height: 40px;
+}
+
+
+
+.avatar_mask_profile {
+    width: 100px;
+    height: 100px;
+}
+
+.avatar_mask_profile img {
+    height: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    .avatar_mask_profile {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .avatar_mask_profile img {
+        height: 150px;
+    }
+}

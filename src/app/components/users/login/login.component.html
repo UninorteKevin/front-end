@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-5">
+            <div class="card text-center shadow">
+                <div class="card-body p-5">
+                    <h3 class="title">INGRESA A TU CUENTA</h3>
+                    <form class="mt-5" #formLogin>
+                        <div class="form-row">
+                            <div class="col">
+                                <input class="form-control myColores-bg-secondary border-0" type="text" name="inputEmail" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <div class="col">
+                                <input class="form-control myColores-bg-secondary border-0" type="password" name="inputPassword" placeholder="Password" required>
+                            </div>
+                        </div>
+                        <div class="form-row mt-5">
+                            <input class="form-control btn btn-dark" type="submit" value="Iniciar sesion" [disabled] = "formLogin.invalid">
+                            <span class="mt-1"><strong>¿Olvidaste tu contraseña?</strong></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <p class="mt-3 text-secondary text-center">
+                <strong>¿No tienes una cuenta?</strong><a [routerLink] = "['/register']" class="nav-link text-secondary" style="display: inline;"><strong><u>Crear una</u></strong></a>
+            </p>
+
+            <p class="mt-3 text-justify text-secondary">
+                Al ingresar, estas aceptando nuestras <a class="nav-link text-secondary" href="#" style="display: inline;"><strong>politicas de privacidad</strong></a>
+                y los<a class="nav-link text-secondary" style="display: inline;"><strong>terminos de condiciones</strong></a>de nuestro sitio.
+            </p>
+        </div>
+    </div>
+</div>
