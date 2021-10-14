@@ -4,15 +4,15 @@
             <div class="card text-center shadow">
                 <div class="card-body p-5">
                     <h3 class="title">INGRESA A TU CUENTA</h3>
-                    <form class="mt-5" #formLogin>
+                    <form class="mt-5" #formLogin = "ngForm" (ngSubmit) = "onLogin()">
                         <div class="form-row">
                             <div class="col">
-                                <input class="form-control myColores-bg-secondary border-0" type="text" name="inputEmail" placeholder="Email" required>
+                                <input class="form-control myColores-bg-secondary border-0" #inputEmail = "ngModel" [(ngModel)] = "email" type="text" name="inputEmail" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="form-row mt-3">
                             <div class="col">
-                                <input class="form-control myColores-bg-secondary border-0" type="password" name="inputPassword" placeholder="Password" required>
+                                <input class="form-control myColores-bg-secondary border-0" type="password" #inputPassword= "ngModel" [(ngModel)] = "password" name="inputPassword" placeholder="Password" required>
                             </div>
                         </div>
                         <div class="form-row mt-5">

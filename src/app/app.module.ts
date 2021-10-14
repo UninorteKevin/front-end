@@ -15,6 +15,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NavLeftComponent } from './components/nav-bar/nav-left/nav-left.component';
 import { ListProductsComponent } from './components/products/list-products/list-products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailProductComponent } from './components/products/detail-product/detail-product.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { ListProductsComponent } from './components/products/list-products/list-
     NotFoundComponent,
     NavBarComponent,
     NavLeftComponent,
-    ListProductsComponent
+    ListProductsComponent,
+    DetailProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,13 @@ body{
 
 
 /*COLORES PERSONALIZADOS CSS*/
+.myColors-bg-primary{
+    background-color: #B47878;
+}
+.myColors-text-primary{
+    color: #B47878;
+}
+
 .myColores-background{
     background-color: #E1DDDD;
 }

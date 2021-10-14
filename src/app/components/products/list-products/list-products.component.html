@@ -1,1 +1,29 @@
-<p>list-products works!</p>
+<div class="container">
+    <h3>Lista de productos</h3>
+    <div class="row" *ngIf = "Products">
+        <div class="col-md-4" *ngFor = "let product of Products">
+            <div class="card h-100">
+                <img src="/assets/img/products/default.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a class="nav-link" [routerLink] = "['/home/products/detail/', product.codigo]">
+                    {{product.nombre}}
+                    </a>
+                  </h5>
+                  <small class="text-secondary">Ref: {{product.codigo}} - Calificacion: {{product.calificacion}}</small>
+                  <p class="card-text">{{product.descripcion}}</p>
+                </div>
+                <div class="card-footer align-items-center">
+                  <small class="text-secondary"><strong>Stock: {{product.stock}}</strong></small>
+                  <p>Precio: {{product.precio_venta | currency : '$':'symbol':'3.0'}} (hoy)</p>
+                  <a href="#" class="btn btn-dark">Añadir a la bolsa</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row text-center text-secondary" *ngIf = "!Products">
+      <div class="col">
+        <h5><u>No se encontraron productos en el sistema</u></h5>
+      </div>
+    </div>
+</div>

@@ -15,12 +15,12 @@
         </li>
       </ul>
     <ul class="nav align-items-center">
-        <li class="nav-item">
-            <a class="nav-link text-dark" [routerLink] = "['/login']">
-                <span class="mx-2">Mi cuenta</span>
-                <div class="avatar_mask text-dark" *ngIf = "Identity">
-                    <img src="/assets/img/users/user-icon.svg" alt="ImageProfile">
-                </div>
+        <li class="nav-item" *ngIf = "!Identity">
+            <a class = "btn btn-dark" [routerLink] ="['/login']">Iniciar sesion</a>
+        </li>
+        <li class="nav-item" *ngIf = "Identity" (click) = "onLogout()">
+            <a class="nav-link text-dark">
+                <span class="mx-2">{{Identity.names}} {{Identity.surnames}}</span>
                 <fa-icon [icon] = "faUserCircle" class="fa fa-2x"></fa-icon>
             </a>
         </li>

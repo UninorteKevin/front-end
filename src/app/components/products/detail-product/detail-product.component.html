@@ -1,0 +1,65 @@
+<div class="container">
+    <a [routerLink] = "['/']">Volver al inicio</a>
+    <div class="row" *ngIf = "Product">
+        <div class="col-md-2">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <img src="/assets/img/products/default.png" class="card-img-top" alt="...">
+                </li>
+                <li class="nav-item mt-2">
+                    <img src="/assets/img/products/default.png" class="card-img-top" alt="...">
+                </li>
+                <li class="nav-item mt-2">
+                    <img src="/assets/img/products/default.png" class="card-img-top" alt="...">
+                </li>
+                <li class="nav-item mt-2">
+                    <img src="/assets/img/products/default.png" class="card-img-top" alt="...">
+                </li>
+              </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="/assets/img/products/default.png" class="card-img-view" alt="...">
+            <hr>
+            <!--SECCION PARA LOS DETALLE DEL PRODUCTO-->
+            <h5><strong>Caracteristicas del producto</strong></h5>
+            <p>
+                {{Product.descripcion}}
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h3>{{Product.nombre}}</h3>
+            <small class="text-secondary">Ref: {{Product.codigo}}</small>
+            <div class="card">
+                <div class="card-body">
+                    <span class="text-secondary"><strong>Precio (Hoy)</strong></span>
+                    <h3 class="myColors-text-primary mb-5">{{Product.precio_venta | currency : '$':'symbol':'3.0'}}</h3>
+                    <small>Calificacion: {{Product.calificacion}}</small>
+                    <div class="row align-items-end mb-3">
+                        <div class="col">
+                            <label for="exampleFormControlSelect1">Cantidad</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <button class="btn myColors-bg-primary text-light">Añadir items</button>
+                        </div>
+                    </div>
+                    <div class="sends">
+                        <h5><strong>Metodos de envio</strong></h5>
+                        <p>Disponible solo para envio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center text-secondary" *ngIf = "!Product || statusResponse != 'SUCCESS'">
+        <div class="col">
+            <h5><u>{{messageResponse}}</u></h5>
+        </div>
+    </div>
+</div>
