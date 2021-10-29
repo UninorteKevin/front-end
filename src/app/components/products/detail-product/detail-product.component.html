@@ -23,17 +23,17 @@
             <!--SECCION PARA LOS DETALLE DEL PRODUCTO-->
             <h5><strong>Caracteristicas del producto</strong></h5>
             <p>
-                {{Product.descripcion}}
+                {{Product.description}}
             </p>
         </div>
         <div class="col-md-4">
-            <h3>{{Product.nombre}}</h3>
-            <small class="text-secondary">Ref: {{Product.codigo}}</small>
+            <h3>{{Product.name}}</h3>
+            <small class="text-secondary">Ref: {{Product.code}}</small>
             <div class="card">
                 <div class="card-body">
                     <span class="text-secondary"><strong>Precio (Hoy)</strong></span>
-                    <h3 class="myColors-text-primary mb-5">{{Product.precio_venta | currency : '$':'symbol':'3.0'}}</h3>
-                    <small>Calificacion: {{Product.calificacion}}</small>
+                    <h3 class="myColors-text-primary mb-5">{{Product.price | currency : '$':'symbol':'3.0'}}</h3>
+                    <small>Calificacion: {{Product.rate}}</small>
                     <div class="row align-items-end mb-3">
                         <div class="col">
                             <label for="exampleFormControlSelect1">Cantidad</label>

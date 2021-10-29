@@ -6,16 +6,16 @@
                 <img src="/assets/img/products/default.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">
-                    <a class="nav-link" [routerLink] = "['/home/products/detail/', product.codigo]">
-                    {{product.nombre}}
+                    <a class="nav-link" [routerLink] = "['/home/products/detail/', product.code]">
+                    {{product.name}}
                     </a>
                   </h5>
-                  <small class="text-secondary">Ref: {{product.codigo}} - Calificacion: {{product.calificacion}}</small>
+                  <small class="text-secondary">Ref: {{product.code}} - Calificacion: {{product.rate}}</small>
                   <p class="card-text">{{product.descripcion}}</p>
                 </div>
                 <div class="card-footer align-items-center">
                   <small class="text-secondary"><strong>Stock: {{product.stock}}</strong></small>
-                  <p>Precio: {{product.precio_venta | currency : '$':'symbol':'3.0'}} (hoy)</p>
+                  <p>Precio: {{product.price | currency : '$':'symbol':'3.0'}} (hoy)</p>
                   <a href="#" class="btn btn-dark">Añadir a la bolsa</a>
                 </div>
               </div>

@@ -1,14 +1,11 @@
 export class Product {
     constructor(
-        public codigo: String,
-        public nombre: String,
-        public descripcion: String,
-        public costo:   Number,
-        public precio_venta: Number,
-        public stock    : Number,
-        public ubicacion: String,
-        public estado: String,
-        public imagenes: String,
-        public calificacion: Number
+        public code: String,
+        public name: String,
+        public description: String,
+        public price: Number,
+        public stock: Number,
+        public rate: Number,
+        public created_at: Date
     ){}
 }
